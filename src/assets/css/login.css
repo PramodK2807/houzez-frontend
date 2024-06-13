@@ -1,0 +1,33 @@
+.login_page .welcome_text h3 {
+  display: block;
+  font-weight: 700;
+  color: #333;
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+}
+.login_page .welcome_text span {
+  display: block;
+  margin-top: 6px;
+  line-height: 22px;
+  font-weight: 600;
+}
+.login_page .welcome_text a{
+    color: #e33324 !important;
+}
+[data-testid="otp-input-root"]{
+  justify-content: center !important;
+}
+[data-testid="otp-input-root"] input{
+  width: 50px !important;
+  height: 50px !important;
+}
+[data-testid="otp-resend-root"]{
+  justify-content: center !important;
+  gap: 10px !important;
+  margin: 20px 0 !important;
+}
+[data-testid="otp-resend-root"] button{
+  background-color: #f8f9fa !important;
+  border: none !important;
+}

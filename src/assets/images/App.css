@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none !important;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+.box_shadow {
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.font_nunito {
+  font-family: "Nunito", sans-serif;
+}
+.flex_evenly {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.flex_between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.primary_btn {
+  background: #e33324;
+  position: relative;
+  font-weight: 700;
+  transition: 0.3s;
+  color: #ffffff;
+  border: 2px solid #e33324;
+  padding: 7.5px 18px;
+  margin: 0 5px;
+  min-width: 116px;
+  text-align: center;
+  line-height: 26px;
+}
+.secondary_btn {
+  background-color: transparent;
+  color: #e33324;
+  border: 2px solid #e33324;
+  padding: 7.5px 18px;
+}
+
+.background {
+  background: linear-gradient(rgb(54 56 62 / 69%), rgb(54 56 62 / 67%)),
+    url(./assets/images/banne1.jpg);
+  background-attachment: fixed;
+  /* background-size: 1258px 805.12px; */
+  /* background-position: 50% -81.275px; */
+  /* min-height: 90vh; */
+  /* background-repeat: no-repeat; */
+  /* width: 100%; */
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
+}
+.callout_bg {
+  background: linear-gradient(rgb(54 56 62 / 69%), rgb(54 56 62 / 67%)),
+    url(./assets/images/banne1.jpg);
+  background-image: url(/images/add.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.content_container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: "Nunito", sans-serif;
+}
+.headline_txt {
+  font-size: 44px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 66px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.paragraph_txt {
+  font-size: 22px;
+  color: #f0f0f0;
+  font-weight: 400;
+  line-height: 34px;
+  margin-top: 5px;
+  display: inline-block;
+}
+input,
+select,
+textarea,
+.select {
+  outline: none;
+  box-sizing: border-box;
+  display: block;
+  background-color: #fbfdff;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid #d5d5d5;
+  opacity: 1;
+  box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  padding: 17px;
+  color: #888888;
+}
+
+.option:hover {
+  background-color: #e33324 !important;
+  color: white !important;
+}
+.search_area {
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.12);
+  padding: 17px;
+  border: 6px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 0px;
+  margin-top: -5px;
+  border-radius: 4px;
+  color: black !important;
+}
+.btn_height {
+  height: 57px;
+}
+.show_options {
+  background-color: white;
+  position: absolute;
+  top: 80px;
+  border-radius: 10px;
+  border: 1px dashed grey;
+  width: 100%;
+  padding: 5px 0;
+  z-index: 55555;
+}
+.show_options .custom_options {
+  padding: 10px 20px;
+  color: #888888;
+}
+.show_options .custom_options:hover {
+  background-color: #e33324;
+  color: white;
+  cursor: pointer;
+}
+.top_section .top_title {
+  background: rgba(18, 18, 18, 0.1);
+  line-height: 26px;
+  color: #e33324;
+  padding: 1.5px 12px;
+  display: block;
+  max-width: max-content;
+  margin: 0 auto 5px auto;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.top_section .second_title .dark_title {
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 9;
+}
+.top_section .second_title .fade_title {
+  font-family: "Open Sans";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  right: 0;
+  color: rgb(0 0 0 / 8%);
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.2;
+  z-index: 0;
+  text-transform: uppercase;
+}
+
+/* card */
+.card_price {
+  background: #429523;
+  padding: 3px 12px;
+  line-height: 26px;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+}
+.card_content {
+  padding: 20px;
+  padding-bottom: 15px;
+}
+.card_content .card_title {
+  font-size: 20px;
+  color: #333;
+  line-height: 31px;
+  font-weight: 700;
+}
+.card_content .card_address {
+  display: inline-block;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #909090;
+}
+.card_content .card_icon i {
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+}
+.fa-bed {
+  background: rgba(42, 65, 232, 0.1);
+  border: 1px solid rgba(42, 65, 232, 0.1);
+  color: #2a41e8;
+}
+.fa-shower {
+  background: rgba(54, 189, 120, 0.1);
+  color: #36bd78;
+  border: 1px solid rgba(54, 189, 120, 0.1);
+}
+.fa-square-parking {
+  background: rgba(240, 39, 39, 0.1);
+  color: #f02727;
+  border: 1px solid rgba(240, 39, 39, 0.1);
+}
+.fa-maximize {
+  background: rgba(15, 197, 191, 0.1);
+  color: #0fc5bf;
+  border: 1px solid rgba(15, 197, 191, 0.1);
+}
+.card_content .item_count {
+  font-size: 13px;
+  display: inline-block;
+  color: #444;
+  padding-left: 3px;
+}
+.w_80_h_80 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid green;
+  padding: 2px;
+}
+.card_content {
+  position: relative;
+}
+
+.card_content .user_icon {
+  position: absolute;
+  right: 10px;
+  top: -44px;
+}
+.card_image .featured {
+  background-color: #f02727;
+  float: left;
+  transform: rotate(-45deg);
+  left: -31px;
+  overflow: hidden !important;
+  color: #fff;
+  position: absolute;
+  top: 20px;
+  text-align: center;
+  width: 120px;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0;
+}
+.slick-track {
+  margin-bottom: 20px;
+}
+.sale_or_rent {
+  display: inline-block;
+  padding: 0px 8px;
+  float: right;
+  border-radius: 4px;
+  font-size: 12px;
+  top: 15px;
+  right: 15px;
+  line-height: 24px;
+  font-weight: 700;
+  position: absolute;
+  color: white;
+}
+.sale {
+  background-color: #429523;
+}
+.rent {
+  background-color: #f02727;
+}
