@@ -662,3 +662,12 @@ textarea,
   background-color: #e33324;
   color: white;
 }
+.wh_25{
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+.property_type{
+  background-color: #925c0f;
+}

@@ -9,7 +9,7 @@ export async function adminLogin(formData) {
     );
 
     if (!data?.error) {
-      localStorage.setItem("houzez-token", headers["x-auth-token-user"]);
+      localStorage.setItem("houzez-token", data?.token);
       return { data };
     } else
       Swal.fire({

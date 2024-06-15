@@ -10,31 +10,36 @@ const CommonCard = ({ property }) => {
         <div className="card_image position-relative overflow-hidden">
           <img
             width={400}
-            height={300}
+            height={200}
             src={property?.property_image[0] || "/images/banne1.jpg"}
             className="w-100 object-fit-cover rounded"
             alt=""
           />
           <p className="featured mb-0">Featured</p>
-          <p className="sale_or_rent sale mb-0">{property?.type}</p>
+          <p className="sale_or_rent sale mb-0 property_type">{property?.type}</p>
           {/* <p className="sale_or_rent rent mb-0">For Rent</p> */}
         </div>
         <div className="card_content">
-          <div className="user_icon">
+          {/* <div className="user_icon">
             <img
               src={property?.owner?.profile_image || "/images/banne1.jpg"}
               className="w_80_h_80"
               alt=""
             />
-          </div>
+          </div> */}
           <div>
-            <p className="card_price">
-              {property?.property_details?.price} / m
-            </p>
+            {property?.type === "FOR SALE" && (
+              <p className="card_price">{property?.property_details?.price}</p>
+            )}
+            {property?.type === "For Rent" && (
+              <p className="card_price">
+                {property?.property_details?.price} / m
+              </p>
+            )}
           </div>
           <div>
             <div className="border-bottom">
-              <p className="card_title p-0 m-0 text-truncate w-100">
+              <p className="card_title p-0 m-0 text-truncate text-capitalize w-100">
                 {property?.title}
               </p>
               <p className="card_address p-0 m-0 my-2">
@@ -78,9 +83,14 @@ const CommonCard = ({ property }) => {
                 </span>
               </div>
             </div>
-            <div className="card_user_info flex_between mt-3">
-              <span>
-                <img src="" alt="" /> {property?.owner?.fullName}
+            <div className="card_user_info flex_between mt-3 text-dark">
+              <span className="d-flex text-capitalize">
+                <img
+                  src={property?.owner?.profile_image}
+                  alt=""
+                  className="wh_25 me-2"
+                />
+                {property?.owner?.fullName || "Jhon Doe"}
               </span>
               <span>{moment(property?.createdAt).fromNow()}</span>
             </div>

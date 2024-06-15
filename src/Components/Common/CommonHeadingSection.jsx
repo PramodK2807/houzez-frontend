@@ -1,19 +1,16 @@
 import React from "react";
 
-const CommonHeadingSection = ({ title = "Featured Props" }) => {
+const CommonHeadingSection = ({ title, title2, description }) => {
   return (
     <div>
-      <div className="text-center py-5 font_nunito">
+      <div className="text-center pt-5 font_nunito">
         <div className="top_section">
           <p className="top_title">{title}</p>
           <div className="second_title position-relative py-2">
-            <p className="dark_title">Most {title}</p>
-            <p className="fade_title">Most {title}</p>
+            <p className="dark_title">{title2}</p>
+            <p className="fade_title">{title2}</p>
           </div>
-          <p className="description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Laboriosam, ex! Lorem ipsum dolor sit amet.
-          </p>
+          <p className="description">{description}</p>
         </div>
       </div>
     </div>

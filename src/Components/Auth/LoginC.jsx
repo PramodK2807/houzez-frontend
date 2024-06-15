@@ -26,6 +26,7 @@ const LoginC = () => {
     console.log(data);
     if (data && !data?.error) {
       secureLocalStorage.setItem("userDetails", data?.user);
+      secureLocalStorage.setItem("houzez_admin_id", data?.user?._id);
       console.log("login", data?.results);
       navigate("/dashboard");
     }

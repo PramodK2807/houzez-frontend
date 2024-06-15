@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CommonHeadingSection from "../Common/CommonHeadingSection";
 import CommonCard from "../Common/CommonCard";
-import { AllProperties } from "../../ApiServices/dashHttpServices";
+import { NewProperties } from "../../ApiServices/dashHttpServices";
 import Slider from "react-slick";
 
 const FeaturedProp = () => {
@@ -12,7 +12,7 @@ const FeaturedProp = () => {
 
   const getAllProperty = async () => {
     try {
-      const { data } = await AllProperties();
+      const { data } = await NewProperties();
       console.log(data?.data);
       if (data && !data?.error) {
         setAllProperties(data?.data);
@@ -58,7 +58,13 @@ const FeaturedProp = () => {
   };
   return (
     <div className="container">
-      <CommonHeadingSection title={"New Properties"} />
+      <CommonHeadingSection
+        title={"New Properties"}
+        title2={"Most New Properties"}
+        description={
+          "Explore the newest properties listed in the last 15 days."
+        }
+      />
       <div className="card_container py-5">
         <Slider {...settings}>
           {allProperties &&

@@ -6,12 +6,19 @@ import { Button, Radio } from "rsuite";
 import Select from "react-select";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { AddProperties } from "../../ApiServices/dashHttpServices";
+import secureLocalStorage from "react-secure-storage";
+import { useNavigate } from "react-router-dom";
 
 const AddProperty = () => {
   const [type, setType] = useState(null);
   const [category, setCategory] = useState(null);
   const [parking, setParking] = useState();
   const [available, setAvailable] = useState();
+  const [file, setFile] = useState([]);
+  const navigate = useNavigate();
+
+  const id = secureLocalStorage.getItem("houzez_admin_id");
 
   const {
     register,
@@ -50,47 +57,44 @@ const AddProperty = () => {
     setCategory(selectedOption);
   };
 
+  const handleFileChange = (e) => {
+    const files = Array.from(e.target.files);
+    setFile((prevSelectedFiles) => [...prevSelectedFiles, ...files]);
+  };
+
   const onSubmit = async (info) => {
+    const formData = new FormData();
+
+    formData.append("title", info.title);
+    formData.append("description", info.description);
+    formData.append("type", type.label);
+    formData.append("area", info.area);
+    formData.append("bathrooms", info.bath);
+    formData.append("parking", parking);
+    formData.append("price", info.price);
+    formData.append("property_size", category.label);
+    formData.append("owner", id);
+    formData.append("isEmpty", available);
+    formData.append("address", info.address);
+    formData.append("city", info.city);
+    formData.append("state", info.state);
+    formData.append("pin_code", info.pin_code);
+
+    file?.forEach((img) => {
+      if (img) {
+        formData.append("property_image", img);
+      }
+    });
+
     try {
-      let formData = {
-        title: info.title,
-        description: info.description,
-        type: type.label,
-        property_image: [
-          "https://wallup.net/wp-content/uploads/2019/09/977071-interior-design-room-furniture-architecture-house-condo-apartment.jpg",
-          "http://www.thewowdecor.com/wp-content/uploads/2015/07/Luxurious-Mansion-Interior-Design-Ideas.jpg",
-          "https://cdn.shopify.com/s/files/1/1917/6601/files/2014-11-The-Most-Beautiful-House-Interior-Design-Ideas-336.jpg",
-          "https://i.pinimg.com/originals/db/47/74/db47743551388dcdf4b7a880ef679f57.jpg",
-          "https://wallup.net/wp-content/uploads/2019/09/335422-architecture-room-living-room.jpg",
-        ],
-        area: info.area,
-        bathrooms: info.bath,
-        parking: parking,
-        price: info.price,
-        property_size: category.label,
-        owner: "6636265e9841afdbbf06c34a",
-        isEmpty: available,
-        address: info.address,
-        city: info.city,
-        state: info.state,
-        pin_code: info.pin_code,
-      };
-      let { data } = await axios.post(
-        `${process.env.REACT_APP_API}api/auth/add-new-property`,
-        formData,
-        {
-          headers: {
-            "x-access-token":
-              "Bearer " +
-              "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjM2MjY1ZTk4NDFhZmRiYmYwNmMzNGEiLCJmdWxsTmFtZSI6InByYW1vZCIsImVtYWlsIjoicHJhbW9kQHRlc3QuY29tIiwiYWdlIjoiMjItMjUiLCJpYXQiOjE3MTQ4OTg2ODYsImV4cCI6MTcxNTUwMzQ4Nn0.1YpKNOl4PZu1SpALbDhDpiD1kMGc9ihJ-hTqnRJpbjk",
-          },
-        }
-      );
-      console.log(data);
+      let { data } = await AddProperties(formData);
+      if (data && !data?.error) {
+        console.log(data);
+        navigate("/User/my-property");
+      }
     } catch (error) {
       console.log(error);
     }
-    console.log(info);
   };
 
   return (
@@ -305,10 +309,24 @@ const AddProperty = () => {
                   <label htmlFor="title">Description</label>
                   <textarea
                     type="text"
-                    className="w-100"
                     placeholder="Enter description..."
-                    {...register("description")}
+                    className={`form-control ${
+                      errors.description ? "is-invalid" : ""
+                    }`}
+                    {...register("description", {
+                      required: "* Description is required",
+                      minLength: {
+                        value: 300,
+                        message:
+                          "Description should be more than 300 characters",
+                      },
+                    })}
                   />
+                  {errors.description && (
+                    <div className="invalid-feedback">
+                      {errors.description.message}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -316,22 +334,23 @@ const AddProperty = () => {
 
           <div className="border my-4 box_shadow">
             <p className="user_title_heading_div">Property Gallery</p>
-
             <div>
               <div className="col-12 px-4 py-2">
                 <div className="text-center dropzone">
-                  <label htmlFor="image" className="cursor-pointer">
+                  <label htmlFor="image_gallery" className="cursor-pointer">
                     <div className="py-2">
-                      <i class="fa-solid fa-cloud-arrow-up fs-2 mt-4"></i>
+                      <i className="fa-solid fa-cloud-arrow-up fs-2 mt-4"></i>
                       <p>Upload your property images</p>
                       <input
                         type="file"
-                        defaultValue={""}
-                        id="image"
-                        name="image"
+                        id="image_gallery"
+                        name="image_gallery"
                         className="d-none w-100 h-100"
-                        accept=".png, .jpeg, .jpg"
-                      />{" "}
+                        accept=".png, .jpeg, .jpg , .webp"
+                        multiple
+                        onChange={handleFileChange}
+                        defaultValue={""}
+                      />
                     </div>
                   </label>
                 </div>
