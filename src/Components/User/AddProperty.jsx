@@ -99,7 +99,13 @@ const AddProperty = () => {
 
   return (
     <UserLayout active="CreateProperty">
-      <CommonHeadingSection />
+      <CommonHeadingSection
+        title={"List Your Properties"}
+        title2={"Advertise Your Properties"}
+        description={
+          "Maximize your property's visibility with our simple and efficient listing tools."
+        }
+      />
 
       <div className="">
         <form onSubmit={handleSubmit(onSubmit)}>

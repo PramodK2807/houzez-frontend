@@ -59,7 +59,7 @@ const PopularProperties = () => {
   };
   return (
     <div className="bg-light">
-      <div className="container">
+      <div className="container pt-5">
         <CommonHeadingSection
           title={"All Properties"}
           title2={"Your Ultimate Property Resource"}

@@ -29,12 +29,16 @@ const MyProperty = () => {
 
       <div className="">
         <form className="font_nunito">
-          <div className="border mt_12 box_shadow">
+          <div className="border box_shadow">
             <p className="user_title_heading_div">My Property</p>
             {property && property?.length > 0 ? (
-              property?.map((item) => <PropertyCards property={item} added={"Added On"} />)
+              property?.map((item) => (
+                <>
+                  <PropertyCards property={item} added={"Added On"} />
+                </>
+              ))
             ) : (
-              <h3 className="text-center">Add your properties</h3>
+              <h3 className="text-center py-5">Add your properties</h3>
             )}
           </div>
         </form>

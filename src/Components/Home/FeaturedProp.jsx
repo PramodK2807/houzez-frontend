@@ -57,7 +57,7 @@ const FeaturedProp = () => {
     ],
   };
   return (
-    <div className="container">
+    <div className="container py-5">
       <CommonHeadingSection
         title={"New Properties"}
         title2={"Most New Properties"}

@@ -29,12 +29,13 @@ const UserLayout = ({ children, active }) => {
               <div>
                 <div className="position-relative">
                   <img
+                    loading="lazy"
                     src={imageUrl || "/images/banne1.jpg"}
                     height={210}
                     className="w-100 object-fit-cover rounded border"
                     alt=""
                   />
-                  <label htmlFor="image" >
+                  <label htmlFor="image">
                     <div class="utf-change-photo-btn-item py-1">
                       <div class="utf-user-photo-upload">
                         <span>
@@ -118,7 +119,7 @@ const UserLayout = ({ children, active }) => {
             </div>
           </div>
 
-          <div className="col-lg-9">{children}</div>
+          <div className="col-lg-9 mt-0">{children}</div>
         </div>
       </div>
     </Layout>
