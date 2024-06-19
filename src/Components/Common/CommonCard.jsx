@@ -4,7 +4,7 @@ import moment from "moment";
 
 const CommonCard = ({ property }) => {
   return (
-    <Link to={"/property/view/123"} state={property}>
+    <Link to={"/property/view"} state={property}>
       {/* Hi */}
       <div className="h-100 rounded box_shadow font_nunito mx-2">
         <div className="card_image position-relative overflow-hidden">
@@ -16,7 +16,9 @@ const CommonCard = ({ property }) => {
             alt=""
           />
           <p className="featured mb-0">Featured</p>
-          <p className="sale_or_rent sale mb-0 property_type">{property?.type}</p>
+          <p className="sale_or_rent sale mb-0 property_type">
+            {property?.type}
+          </p>
           {/* <p className="sale_or_rent rent mb-0">For Rent</p> */}
         </div>
         <div className="card_content">

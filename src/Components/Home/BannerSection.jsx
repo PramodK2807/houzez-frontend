@@ -1,10 +1,55 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "rsuite";
 import Select from "react-select";
+import state from "../../utils/state.json";
 
 const BannerSection = () => {
-  const [showCity, setShowCity] = useState(false);
-  const [showState, setShowState] = useState(false);
+  const [cityOptions, setCityOptions] = useState();
+  const [selectedCity, setSelectedCity] = useState();
+  const [stateOptions, setStateOptions] = useState();
+  const [stateData, setStateData] = useState();
+  const [selectedState, setSelectedState] = useState();
+  const [keywords, setKeywords] = useState("");
+
+  useEffect(() => {
+    createStateOption(state);
+  }, [state]);
+
+  const createStateOption = (data) => {
+    setStateData(data);
+    let values = data?.states?.map((item, i) => ({
+      value: item?.name,
+      label: (
+        <div key={i}>
+          {item?.icon} {item?.name}
+        </div>
+      ),
+    }));
+    setStateOptions(values);
+  };
+  const createCityOption = (data) => {
+    console.log(data);
+    let values = data[0]?.cities?.map((item, i) => ({
+      value: item?.name,
+      label: (
+        <div key={i}>
+          {item?.icon} {item?.name}
+        </div>
+      ),
+    }));
+    console.log(values);
+    setCityOptions(values);
+  };
+
+  const handleStateChange = (selectedOption) => {
+    console.log(`Option selected:`, selectedOption);
+    setSelectedState(selectedOption);
+
+    const city = stateData?.states?.filter(
+      (data, i) => data?.name === selectedOption?.value
+    );
+    createCityOption(city);
+  };
 
   return (
     <div className="background parallax">
@@ -23,19 +68,17 @@ const BannerSection = () => {
                   className="w-100"
                   type="text"
                   placeholder="Enter keywords..."
+                  onChange={(e)=> setKeywords(e.target.value)}
+                  value={keywords}
                 />
               </div>
               <div className="mb-3 col-md-6 col-lg-3 position-relative ">
                 <div>
                   <Select
                     name="type"
-                    // value={type}
-                    // onChange={handleTypeChange}
-                    // options={propertyType}
-                    // styles={customStyles}
-                    // {...register("type", {
-                    //   required: "* Property type is required",
-                    // })}
+                    value={selectedState}
+                    onChange={handleStateChange}
+                    options={stateOptions}
                     placeholder="Select State"
                   />
                 </div>
@@ -44,13 +87,9 @@ const BannerSection = () => {
                 <div>
                   <Select
                     name="type"
-                    // value={type}
-                    // onChange={handleTypeChange}
-                    // options={propertyType}
-                    // styles={customStyles}
-                    // {...register("type", {
-                    //   required: "* Property type is required",
-                    // })}
+                    value={selectedCity}
+                    onChange={setSelectedCity}
+                    options={cityOptions}
                     placeholder="Select City"
                   />
                 </div>

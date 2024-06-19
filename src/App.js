@@ -25,7 +25,7 @@ function App() {
       <Route exact path="User/save-property" element={<BookMarkProp />} />
       <Route exact path="User/my-property" element={<MyProperty />} />
       <Route exact path="User/My-Profile" element={<MyProfile />} />
-      <Route exact path="property/view/:id" element={<ViewProperty />} />
+      <Route exact path="property/view" element={<ViewProperty />} />
     </Routes>
   );
 }

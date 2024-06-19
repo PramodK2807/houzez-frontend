@@ -1,5 +1,6 @@
 import moment from "moment";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const PropertyCards = ({ property, added }) => {
   console.log(property);
@@ -51,9 +52,9 @@ const PropertyCards = ({ property, added }) => {
                 <button className="action_btn edit_btn">
                   <i class="fa-regular fa-pen-to-square"></i>
                 </button>
-                <button className="action_btn view_btn">
+                <Link to={"/property/view"} state={property} className="action_btn view_btn">
                   <i class="fa-regular fa-eye"></i>
-                </button>
+                </Link>
                 <button className="action_btn delete_btn">
                   <i class="fa-solid fa-trash-can"></i>
                 </button>

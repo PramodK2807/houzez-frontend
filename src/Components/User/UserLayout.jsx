@@ -32,7 +32,7 @@ const UserLayout = ({ children, active }) => {
                     loading="lazy"
                     src={imageUrl || "/images/banne1.jpg"}
                     height={210}
-                    className="w-100 object-fit-cover rounded border"
+                    className="w-100 object-fit-fill rounded border"
                     alt=""
                   />
                   <label htmlFor="image">

@@ -1,0 +1,254 @@
+{
+  "states": [
+    {
+      "name": "Andhra Pradesh",
+      "icon": "🌴",
+      "cities": [
+        { "name": "Visakhapatnam", "pin_code": "530001", "icon": "🏖️" },
+        { "name": "Vijayawada", "pin_code": "520001", "icon": "🌆" },
+        { "name": "Guntur", "pin_code": "522001", "icon": "🌳" },
+        { "name": "Tirupati", "pin_code": "517501", "icon": "🕍" }
+      ]
+    },
+    {
+      "name": "Arunachal Pradesh",
+      "icon": "🏞️",
+      "cities": [
+        { "name": "Itanagar", "pin_code": "791111", "icon": "⛩️" },
+        { "name": "Naharlagun", "pin_code": "791110", "icon": "🏞️" }
+      ]
+    },
+    {
+      "name": "Assam",
+      "icon": "🌿",
+      "cities": [
+        { "name": "Guwahati", "pin_code": "781001", "icon": "🌉" },
+        { "name": "Dibrugarh", "pin_code": "786001", "icon": "🚣‍♂️" },
+        { "name": "Silchar", "pin_code": "788001", "icon": "🌳" },
+        { "name": "Jorhat", "pin_code": "785001", "icon": "🏞️" }
+      ]
+    },
+    {
+      "name": "Bihar",
+      "icon": "🌾",
+      "cities": [
+        { "name": "Patna", "pin_code": "800001", "icon": "🕌" },
+        { "name": "Gaya", "pin_code": "823001", "icon": "🏯" },
+        { "name": "Bhagalpur", "pin_code": "812001", "icon": "🏞️" },
+        { "name": "Muzaffarpur", "pin_code": "842001", "icon": "🌳" }
+      ]
+    },
+    {
+      "name": "Chhattisgarh",
+      "icon": "🌲",
+      "cities": [
+        { "name": "Raipur", "pin_code": "492001", "icon": "🌇" },
+        { "name": "Bhilai", "pin_code": "490006", "icon": "🏞️" },
+        { "name": "Bilaspur", "pin_code": "495001", "icon": "🏰" },
+        { "name": "Korba", "pin_code": "495677", "icon": "🌳" }
+      ]
+    },
+    {
+      "name": "Goa",
+      "icon": "🏖️",
+      "cities": [
+        { "name": "Panaji", "pin_code": "403001", "icon": "⛵" },
+        { "name": "Vasco da Gama", "pin_code": "403802", "icon": "🏝️" },
+        { "name": "Margao", "pin_code": "403601", "icon": "🌴" }
+      ]
+    },
+    {
+      "name": "Gujarat",
+      "icon": "🏜️",
+      "cities": [
+        { "name": "Ahmedabad", "pin_code": "380001", "icon": "🕌" },
+        { "name": "Surat", "pin_code": "395001", "icon": "🏖️" },
+        { "name": "Vadodara", "pin_code": "390001", "icon": "🏞️" },
+        { "name": "Rajkot", "pin_code": "360001", "icon": "🌳" }
+      ]
+    },
+    {
+      "name": "Haryana",
+      "icon": "🌾",
+      "cities": [
+        { "name": "Faridabad", "pin_code": "121001", "icon": "🏞️" },
+        { "name": "Gurgaon", "pin_code": "122001", "icon": "🌆" },
+        { "name": "Panipat", "pin_code": "132103", "icon": "🏰" },
+        { "name": "Ambala", "pin_code": "133001", "icon": "⛺" }
+      ]
+    },
+    {
+      "name": "Himachal Pradesh",
+      "icon": "⛰️",
+      "cities": [
+        { "name": "Shimla", "pin_code": "171001", "icon": "🏰" },
+        { "name": "Mandi", "pin_code": "175001", "icon": "🏞️" },
+        { "name": "Dharamshala", "pin_code": "176215", "icon": "🏞️" },
+        { "name": "Kullu", "pin_code": "175101", "icon": "🌄" }
+      ]
+    },
+    {
+      "name": "Jharkhand",
+      "icon": "🌿",
+      "cities": [
+        { "name": "Ranchi", "pin_code": "834001", "icon": "🌳" },
+        { "name": "Jamshedpur", "pin_code": "831001", "icon": "🏞️" },
+        { "name": "Dhanbad", "pin_code": "826001", "icon": "🏭" },
+        { "name": "Bokaro", "pin_code": "827001", "icon": "🏞️" }
+      ]
+    },
+    {
+      "name": "Karnataka",
+      "icon": "🌴",
+      "cities": [
+        { "name": "Bangalore", "pin_code": "560001", "icon": "🏙️" },
+        { "name": "Mysore", "pin_code": "570001", "icon": "🏰" },
+        { "name": "Hubli-Dharwad", "pin_code": "580001", "icon": "🏞️" },
+        { "name": "Mangalore", "pin_code": "575001", "icon": "🏖️" }
+      ]
+    },
+    {
+      "name": "Kerala",
+      "icon": "🌴",
+      "cities": [
+        { "name": "Thiruvananthapuram", "pin_code": "695001", "icon": "🏝️" },
+        { "name": "Kochi", "pin_code": "682001", "icon": "⛵" },
+        { "name": "Kozhikode", "pin_code": "673001", "icon": "🏖️" },
+        { "name": "Thrissur", "pin_code": "680001", "icon": "🌴" }
+      ]
+    },
+    {
+      "name": "Madhya Pradesh",
+      "icon": "🌾",
+      "cities": [
+        { "name": "Bhopal", "pin_code": "462001", "icon": "🕌" },
+        { "name": "Indore", "pin_code": "452001", "icon": "🏞️" },
+        { "name": "Jabalpur", "pin_code": "482001", "icon": "🏰" },
+        { "name": "Gwalior", "pin_code": "474001", "icon": "🏞️" }
+      ]
+    },
+    {
+      "name": "Maharashtra",
+      "icon": "🏞️",
+      "cities": [
+        { "name": "Mumbai", "pin_code": "400001", "icon": "🏙️" },
+        { "name": "Pune", "pin_code": "411001", "icon": "🌳" },
+        { "name": "Nagpur", "pin_code": "440001", "icon": "🏞️" },
+        { "name": "Nashik", "pin_code": "422001", "icon": "🌄" }
+      ]
+    },
+    {
+      "name": "Manipur",
+      "icon": "🌳",
+      "cities": [{ "name": "Imphal", "pin_code": "795001", "icon": "⛰️" }]
+    },
+    {
+      "name": "Meghalaya",
+      "icon": "🏞️",
+      "cities": [{ "name": "Shillong", "pin_code": "793001", "icon": "🌲" }]
+    },
+    {
+      "name": "Mizoram",
+      "icon": "🏞️",
+      "cities": [{ "name": "Aizawl", "pin_code": "796001", "icon": "🌿" }]
+    },
+    {
+      "name": "Nagaland",
+      "icon": "🏞️",
+      "cities": [
+        { "name": "Kohima", "pin_code": "797001", "icon": "⛰️" },
+        { "name": "Dimapur", "pin_code": "797112", "icon": "🌳" }
+      ]
+    },
+    {
+      "name": "Odisha",
+      "icon": "🌿",
+      "cities": [
+        { "name": "Bhubaneswar", "pin_code": "751001", "icon": "🏞️" },
+        { "name": "Cuttack", "pin_code": "753001", "icon": "⛵" },
+        { "name": "Rourkela", "pin_code": "769001", "icon": "🌳" },
+        { "name": "Berhampur", "pin_code": "760001", "icon": "🏖️" }
+      ]
+    },
+    {
+      "name": "Punjab",
+      "icon": "🌾",
+      "cities": [
+        { "name": "Chandigarh", "pin_code": "160001", "icon": "🏞️" },
+        { "name": "Ludhiana", "pin_code": "141001", "icon": "🕌" },
+        { "name": "Amritsar", "pin_code": "143001", "icon": "⛪" },
+        { "name": "Jalandhar", "pin_code": "144001", "icon": "🏞️" }
+      ]
+    },
+    {
+      "name": "Rajasthan",
+      "icon": "🏜️",
+      "cities": [
+        { "name": "Jaipur", "pin_code": "302001", "icon": "🕌" },
+        { "name": "Jodhpur", "pin_code": "342001", "icon": "🏰" },
+        { "name": "Udaipur", "pin_code": "313001", "icon": "⛩️" },
+        { "name": "Kota", "pin_code": "324001", "icon": "🏞️" }
+      ]
+    },
+    {
+      "name": "Sikkim",
+      "icon": "⛰️",
+      "cities": [{ "name": "Gangtok", "pin_code": "737101", "icon": "🏞️" }]
+    },
+    {
+      "name": "Tamil Nadu",
+      "icon": "🌴",
+      "cities": [
+        { "name": "Chennai", "pin_code": "600001", "icon": "🏙️" },
+        { "name": "Coimbatore", "pin_code": "641001", "icon": "🌳" },
+        { "name": "Madurai", "pin_code": "625001", "icon": "🕌" },
+        { "name": "Tiruchirappalli", "pin_code": "620001", "icon": "⛩️" }
+      ]
+    },
+    {
+      "name": "Telangana",
+      "icon": "🌴",
+      "cities": [
+        { "name": "Hyderabad", "pin_code": "500001", "icon": "🏙️" },
+        { "name": "Warangal", "pin_code": "506001", "icon": "🏞️" },
+        { "name": "Nizamabad", "pin_code": "503001", "icon": "🌳" },
+        { "name": "Karimnagar", "pin_code": "505001", "icon": "🕌" }
+      ]
+    },
+    {
+      "name": "Tripura",
+      "icon": "🌿",
+      "cities": [{ "name": "Agartala", "pin_code": "799001", "icon": "🏞️" }]
+    },
+    {
+      "name": "Uttar Pradesh",
+      "icon": "🌾",
+      "cities": [
+        { "name": "Lucknow", "pin_code": "226001", "icon": "🕌" },
+        { "name": "Kanpur", "pin_code": "208001", "icon": "🏞️" },
+        { "name": "Varanasi", "pin_code": "221001", "icon": "⛪" },
+        { "name": "Agra", "pin_code": "282001", "icon": "🏰" }
+      ]
+    },
+    {
+      "name": "Uttarakhand",
+      "icon": "⛰️",
+      "cities": [
+        { "name": "Dehradun", "pin_code": "248001", "icon": "🏞️" },
+        { "name": "Haridwar", "pin_code": "249401", "icon": "🕉️" },
+        { "name": "Rishikesh", "pin_code": "249201", "icon": "🧘" },
+        { "name": "Nainital", "pin_code": "263001", "icon": "🏞️" }
+      ]
+    },
+    {
+      "name": "West Bengal",
+      "icon": "🌿",
+      "cities": [
+        { "name": "Kolkata", "pin_code": "700001", "icon": "🏙️" },
+        { "name": "Howrah", "pin_code": "711101", "icon": "🌉" },
+        { "name": "Durgapur", "pin_code": "713201", "icon": "🏞️" },
+        { "name": "Asansol", "pin_code": "713301", "icon": "🏭" }
+      ]
+    }
+  ]
+}
